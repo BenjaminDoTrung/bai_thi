@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài4</title>
+</head>
+<body>
+<canvas id="myCanvas" width="500" height="500"></canvas>
+</body>
+</html>
+<script>
+    class Rectangle {
+        x
+        y
+        width
+        height
+        color
+        constructor(x, y, width,height, color) {
+            this.x = x
+            this.y = y
+            this.width = width
+            this.height = height
+            this.color = color
+        }
+        render() {
+            let c = document.getElementById("myCanvas");
+            let veHCN = c.getContext("2d")
+                veHCN.fillRect(this.x, this.y, this.width, this.height)
+                veHCN.fillStyle = this.color
+        }
+    }
+
+    let hcn = new Rectangle(10, 10, 200, 100, "#00000")
+    hcn.render()
+</script>

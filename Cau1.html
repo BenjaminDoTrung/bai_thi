@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>câu 1</title>
+</head>
+<body>
+<script>
+    function diemThi(arr) {
+        var tem;
+        for ( let i = 0; i<arr.length; i++) {
+            for (let j = 0; j < arr.length; j++) {
+                if (arr[i] > arr[j]) {
+                    tem = arr[i];
+                    arr[i] = arr[j];
+                    arr[j] = tem;
+                }
+              }
+        }
+  document.write(arr)
+    }
+    diemThi(arr);
+    document.write("điểm cao thứ 3 là: " + arr[2]);
+</script>
+</body>
+</html>
